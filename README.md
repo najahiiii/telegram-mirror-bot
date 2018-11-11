@@ -12,11 +12,13 @@ There is very little preventing users from using this to mirror pirated content.
 
 ### Bot commands
 
-* `/mirror <url>`: Download from the given URL and upload it to Google Drive. <url> can be HTTP(S), a BitTorrent magnet, or a HTTP(S) url to a BitTorrent .torrent file. A status message will be shown and updated while downloading.
-* `/mirrorTar <url>`: Same as `/mirror`, but archive multiple files into a tar before uploading it.
-* `/mirrorStatus`: Send a status message about the current download.
-* `/cancelMirror`: Cancel the current mirroring task. Only the person who started the task, SUDO_USERS, and chat admins can use this command.
+* `/mirror <url>` : Download from the given URL and upload it to Google Drive. <url> can be HTTP(S), a BitTorrent magnet, or a HTTP(S) url to a BitTorrent .torrent file. A status message will be shown and updated while downloading.
+* `/mirrorTar <url>` : Same as `/mirror`, but archive multiple files into a tar before uploading it.
+* `/mirrorStatus` : Send a status message about the current download.
+* `/cancelMirror` : Cancel the current mirroring task. Only the person who started the task, SUDO_USERS, and chat admins can use this command.
 * `/list <filename>` : Send links to downloads with the `filename` substring in the name. In case of too many downloads, only show the most recent few. 
+* `/source` : Sends the source code of the bot
+* `/ping` : Tests the connection with Telegram's API
 
 ### Pre-installation
 
@@ -42,8 +44,8 @@ There is very little preventing users from using this to mirror pirated content.
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/Yash-Garg/telegram-mirror-bot
-   cd aria-telegram-mirror-bot
+   $ git clone https://github.com/Yash-Garg/telegram-mirror-bot
+   $ cd telegram-mirror-bot
    ```
 
 2. Run `npm install`
@@ -51,8 +53,8 @@ There is very little preventing users from using this to mirror pirated content.
 3. Copy the example files:
 
    ```bash
-   cp .constants.js.example .constants.js
-   cp aria.sh.example aria.sh
+   $ cp .constants.js.example .constants.js
+   $ cp aria.sh.example aria.sh
    ```
 
 4. Configure the aria2 startup script:
@@ -84,7 +86,7 @@ There is very little preventing users from using this to mirror pirated content.
 
 9. Start the bot with `npm --max_old_space_size=128 start`
 
-10. Open Telegram, and send `/mirror https://raw.githubusercontent.com/out386/aria-telegram-mirror-bot/master/README.md` to the bot.
+10. Open Telegram, and send `/mirror https://raw.githubusercontent.com/Yash-Garg/telegram-mirror-bot/master/README.md` to the bot.
 
 11. In the terminal, it'll ask you to visit an authentication URL. Visit it, grant access, copy the code on that page, and paste it in the terminal.
 
@@ -147,4 +149,4 @@ If `successful` is false, any or all of the fields of `file` might be absent. Ho
 ### License
 The MIT License (MIT)
 
-Copyright © 2018 out386
+Copyright © 2018
